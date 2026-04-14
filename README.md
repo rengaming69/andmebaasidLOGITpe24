@@ -36,4 +36,4 @@ DATETIME
 BOOLEAN
 
 ## Piirangud
-1. 
+1.  ## MINE VITTU KUI IGAV SIIN ON
