@@ -41,3 +41,10 @@ BOOLEAN
 3.  unique
 4.  not null
 5.  check
+
+
+## tabelivahelised seosed
+- üks - ühele (nt mees --naine)
+- üks - mitmele (õpilane käib erinvates õppeainetes)
+   <img width="310" height="196" alt="{CC87DBFA-31A5-424B-AAE3-4792ABC6FB48}" src="https://github.com/user-attachments/assets/356d9df0-d9de-4a16-b351-121654863442" />
+   - mitu - mitmele (nt suhted õpilasted vahel)
