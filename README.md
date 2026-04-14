@@ -36,4 +36,8 @@ DATETIME
 BOOLEAN
 
 ## Piirangud
-1.  ## MINE VITTU KUI IGAV SIIN ON
+1.  primary key
+2.  foreign key
+3.  unique
+4.  not null
+5.  check
