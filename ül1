@@ -1,0 +1,45 @@
+-- Tabel: Category (Liik)
+CREATE TABLE Category (
+    idCategory INT PRIMARY KEY,
+    CategoryName VARCHAR(100) NOT NULL UNIQUE
+);
+
+-- Tabel: Product (Kaup)
+CREATE TABLE Product (
+    idProduct INT PRIMARY KEY,
+    ProductName VARCHAR(100) NOT NULL,
+    idCategory INT,
+    Price DECIMAL(10, 2) CHECK (Price >= 0),
+    CONSTRAINT FK_Product_Category FOREIGN KEY (idCategory) 
+        REFERENCES Category(idCategory)
+);
+
+-- Tabel: Customer (Ostja) - Lisatud vastavalt tekstile pildi all
+CREATE TABLE Customer (
+    idCustomer INT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Contact VARCHAR(255)
+);
+
+-- Tabel: Sale (Müük)
+CREATE TABLE Sale (
+    idSale INT PRIMARY KEY,
+    idProduct INT NOT NULL,
+    idCustomer INT NOT NULL,
+    Count_pr INT DEFAULT 1 CHECK (Count_pr > 0),
+    Date_of_sale DATE DEFAULT CURRENT_DATE,
+    CONSTRAINT FK_Sale_Product FOREIGN KEY (idProduct) 
+        REFERENCES Product(idProduct),
+    CONSTRAINT FK_Sale_Customer FOREIGN KEY (idCustomer) 
+        REFERENCES Customer(idCustomer)
+);
+-- Muudame toote nime välja pikkust 255 sümbolini
+ALTER TABLE Product 
+ALTER COLUMN ProductName VARCHAR(255);
+-- Lisame mõõtühikute välja
+ALTER TABLE Sale 
+ADD Units VARCHAR(20);
+-- Eemaldame nime unikaalsuse piirangu (eeldades, et nimi on teada)
+-- NB! Piirangu nimi sõltub süsteemist, kui seda pole loomisel ise määratud
+ALTER TABLE Category 
+DROP CONSTRAINT CategoryName;
