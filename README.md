@@ -52,3 +52,4 @@ BOOLEAN
 - üks - mitmele (õpilane käib erinvates õppeainetes)
    <img width="310" height="196" alt="{CC87DBFA-31A5-424B-AAE3-4792ABC6FB48}" src="https://github.com/user-attachments/assets/356d9df0-d9de-4a16-b351-121654863442" />
    - mitu - mitmele (nt suhted õpilasted vahel)
+<img width="625" height="352" alt="{8DD2D362-1C92-408D-A9CD-BB6834A2FAC8}" src="https://github.com/user-attachments/assets/4d9733a3-608b-438a-af40-1e54ff7a0209" />
