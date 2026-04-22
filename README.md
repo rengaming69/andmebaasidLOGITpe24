@@ -53,3 +53,4 @@ BOOLEAN
    <img width="310" height="196" alt="{CC87DBFA-31A5-424B-AAE3-4792ABC6FB48}" src="https://github.com/user-attachments/assets/356d9df0-d9de-4a16-b351-121654863442" />
    - mitu - mitmele (nt suhted õpilasted vahel)
 <img width="625" height="352" alt="{8DD2D362-1C92-408D-A9CD-BB6834A2FAC8}" src="https://github.com/user-attachments/assets/4d9733a3-608b-438a-af40-1e54ff7a0209" />
+<img width="615" height="351" alt="{904C2DC7-4814-4FBE-AF9D-8DBE97286649}" src="https://github.com/user-attachments/assets/d209f1b1-8bd8-42dc-9fc3-9ae3bb5e5007" />
