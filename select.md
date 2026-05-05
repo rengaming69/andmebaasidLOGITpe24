@@ -5,6 +5,10 @@
 <img width="1552" height="891" alt="{F72AC801-470E-4871-88AD-1250E222DB8F}" src="https://github.com/user-attachments/assets/32ae311b-4086-4476-aa46-cce5db979d22" />
 
 
+
+<img width="663" height="843" alt="{31A5D55F-4654-4627-AC3A-819C70EBAEE7}" src="https://github.com/user-attachments/assets/3cc27c2a-ee03-4809-aebf-b7705fe79f7f" />
+
+
 ``` create database selectrokk;
 use uus
 create table auto(
