@@ -64,7 +64,7 @@ insert into auto (autonumber, mark, mudell, v_aasta, varv, hind) values ('499DKU
 insert into auto (autonumber, mark, mudell, v_aasta, varv, hind) values ('058rzG', 'Ford', 'Windstar', 2001, 'Puce', '€1892,83');
 insert into auto (autonumber, mark, mudell, v_aasta, varv, hind) values ('484JTQ', 'Acura', 'Integra', 1998, 'Goldenrod', '€9563,27')
 
-````sql
+```sql
 --Näita kõik
 select * from auto;
 --näita ainult mark, mudel ja hind
@@ -72,7 +72,7 @@ select mark, mudell, hind from auto;
 --tinigmused
 --sorteerime 
 from auto
-order by hind desc;
+order by hind desc;```
 
 <img width="273" height="167" alt="{96E5E66A-6DF0-4FB4-B33B-0B1BED77F4B5}" src="https://github.com/user-attachments/assets/67acbdbd-c9b8-420e-b1e5-2d97a067cab5" />
 
