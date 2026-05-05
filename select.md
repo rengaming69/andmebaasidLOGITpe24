@@ -74,7 +74,8 @@ select mark, mudell, hind from auto;
 from auto
 order by hind desc;```
 
-<img width="273" height="167" alt="{96E5E66A-6DF0-4FB4-B33B-0B1BED77F4B5}" src="https://github.com/user-attachments/assets/67acbdbd-c9b8-420e-b1e5-2d97a067cab5" />
+<img width="539" height="264" alt="{6D0FBB7F-12F5-43F5-B19B-54A783953752}" src="https://github.com/user-attachments/assets/56941fca-720a-462a-8e79-eb4c28512bda" />
+
 
 
 
