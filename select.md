@@ -1,7 +1,7 @@
 <img width="1392" height="491" alt="{95842C6A-B919-4452-BD62-388F73B7DF45}" src="https://github.com/user-attachments/assets/655af006-92ce-493a-8774-bdab78cd3dda" />
 
 
-create database selectrokk;
+``` create database selectrokk;
 use uus
 create table auto(
 autonumber char(6) primary key,
@@ -9,7 +9,7 @@ mark varchar(30),
 mudell varchar(50),
 v_aasta int,
 varv varchar(50),
-hind money);
+hind money);```
 
 select * from auto;
 --mackaroo.com
