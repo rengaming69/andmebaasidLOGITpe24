@@ -1,0 +1,189 @@
+# SQL Triggerid – Konspekt
+
+## Mis on trigger?
+
+SQL trigger on andmebaasi objekt, mis **käivitub automaatselt** teatud sündmuse toimumisel (INSERT, UPDATE, DELETE). Triggeri abil saab näiteks logida muutusi, kontrollida andmeid või teha lisatoiminguid.
+
+---
+
+## 1. Andmebaasi ja tabelite loomine
+
+```sql
+CREATE DATABASE trigerTARgv24;
+USE trigerTARgv24;
+
+-- Põhitabel
+CREATE TABLE linnad (
+    linnID   INT PRIMARY KEY IDENTITY(1,1),
+    linnanimi VARCHAR(15) NOT NULL,
+    rahvaarv  INT
+);
+
+-- Logitabel
+CREATE TABLE logi (
+    id      INT PRIMARY KEY IDENTITY(1,1),
+    kasutaja VARCHAR(100),
+    aeg     DATETIME,
+    toiming  VARCHAR(100),
+    andmed   TEXT
+);
+```
+
+---
+
+## 2. INSERT-trigger
+
+Jälgib uute kirjete lisamist tabelisse `linnad` ja salvestab info tabelisse `logi`.
+
+```sql
+CREATE TRIGGER linnaLisamine
+ON linnad
+FOR INSERT
+AS
+INSERT INTO logi (kasutaja, aeg, toiming, andmed)
+SELECT
+    SUSER_NAME(),
+    GETDATE(),
+    'on tehtud INSERT käsk',
+    CONCAT('linn: ', inserted.linnanimi, ', elanike arv: ', inserted.rahvaarv)
+FROM inserted;
+```
+
+> **`inserted`** – SQL Serveri virtuaaltabel, mis sisaldab äsja lisatud ridu.  
+> **`SUSER_NAME()`** – tagastab sisselogitud kasutaja nime.  
+> **`GETDATE()`** – tagastab praeguse kuupäeva ja kellaaja.
+
+### Kontrollimine
+
+```sql
+INSERT INTO linnad (linnanimi, rahvaarv) VALUES ('Tallinn', 600000);
+SELECT * FROM linnad;
+SELECT * FROM logi;
+```
+
+---
+
+## 3. DELETE-trigger
+
+Jälgib kirjete kustutamist tabelist `linnad`.
+
+```sql
+CREATE TRIGGER linnaKustutamine
+ON linnad
+FOR DELETE
+AS
+INSERT INTO logi (kasutaja, aeg, toiming, andmed)
+SELECT
+    SUSER_NAME(),
+    GETDATE(),
+    'on tehtud DELETE käsk',
+    CONCAT('linn: ', deleted.linnanimi, ', elanike arv: ', deleted.rahvaarv)
+FROM deleted;
+```
+
+> **`deleted`** – virtuaaltabel, mis sisaldab kustutatud ridu.
+
+### Kontrollimine
+
+```sql
+DELETE FROM linnad WHERE linnID = 1;
+SELECT * FROM linnad;
+SELECT * FROM logi;
+```
+
+---
+
+## 4. UPDATE-trigger
+
+Jälgib kirjete muutmist ja salvestab nii vanad kui uued andmed.
+
+```sql
+CREATE TRIGGER linnaUuendamine
+ON linnad
+FOR UPDATE
+AS
+INSERT INTO logi (kasutaja, aeg, toiming, andmed)
+SELECT
+    SUSER_NAME(),
+    GETDATE(),
+    'on tehtud UPDATE käsk',
+    CONCAT(
+        'vanad andmed - linn: ', deleted.linnanimi, ', elanike arv: ', deleted.rahvaarv,
+        ' | uued andmed - linn: ', inserted.linnanimi, ', elanike arv: ', inserted.rahvaarv
+    )
+FROM deleted
+INNER JOIN inserted ON deleted.linnID = inserted.linnID;
+```
+
+> UPDATE-triggers on saadaval **mõlemad** virtuaaltabelid: `deleted` (vanad väärtused) ja `inserted` (uued väärtused).
+
+---
+
+## 5. Triggeri muutmine (ALTER TRIGGER)
+
+```sql
+ALTER TRIGGER [dbo].[linnaLisamine]
+ON [dbo].[linnad]
+FOR INSERT
+AS
+INSERT INTO logi (kasutaja, aeg, toiming, andmed)
+SELECT
+    SUSER_NAME(),
+    GETDATE(),
+    'on tehtud INSERT käsk',
+    CONCAT('linn: ', inserted.linnanimi, ', elanike arv: ', inserted.rahvaarv)
+FROM inserted;
+```
+
+> Triggeri muutmiseks SSMS-is: **Leia trigger → Paremklõps → Modify → Muuda → Execute**
+
+---
+
+## 6. Kombineeritud INSERT ja DELETE trigger
+
+```sql
+CREATE TRIGGER linnaLisamineJaKustutamine
+ON linnad
+FOR INSERT, DELETE
+AS
+-- INSERT osa
+INSERT INTO logi (kasutaja, aeg, toiming, andmed)
+SELECT
+    SUSER_NAME(), GETDATE(),
+    'INSERT',
+    CONCAT('linn: ', inserted.linnanimi, ', elanike arv: ', inserted.rahvaarv)
+FROM inserted
+WHERE EXISTS (SELECT 1 FROM inserted)
+
+UNION ALL
+
+-- DELETE osa
+SELECT
+    SUSER_NAME(), GETDATE(),
+    'DELETE',
+    CONCAT('linn: ', deleted.linnanimi, ', elanike arv: ', deleted.rahvaarv)
+FROM deleted
+WHERE EXISTS (SELECT 1 FROM deleted);
+```
+
+---
+
+## Kokkuvõte
+
+| Trigger | Virtuaaltabel(id) | Käivitub |
+|---------|-------------------|----------|
+| INSERT  | `inserted`        | Uue rea lisamisel |
+| DELETE  | `deleted`         | Rea kustutamisel |
+| UPDATE  | `inserted` + `deleted` | Rea muutmisel |
+
+### Kasulikud funktsioonid
+
+| Funktsioon | Selgitus |
+|------------|----------|
+| `GETDATE()` | Praegune kuupäev ja kellaaeg |
+| `SUSER_NAME()` | Sisselogitud kasutaja nimi |
+| `CONCAT(...)` | Tekstide liitmine |
+
+---
+
+*Konspekt põhineb tunnis tehtud harjutustel – TARgv24*
