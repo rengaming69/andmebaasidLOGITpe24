@@ -8,9 +8,9 @@ SQL trigger on andmebaasi objekt, mis **käivitub automaatselt** teatud sündmus
 
 ## 1. Andmebaasi ja tabelite loomine
 
-```sql
-CREATE DATABASE trigerTARgv24;
-USE trigerTARgv24;
+```
+CREATE DATABASE trigerLOGitpe24;
+USE trigerLOGitpe24;
 
 -- Põhitabel
 CREATE TABLE linnad (
@@ -35,7 +35,7 @@ CREATE TABLE logi (
 
 Jälgib uute kirjete lisamist tabelisse `linnad` ja salvestab info tabelisse `logi`.
 
-```sql
+```
 CREATE TRIGGER linnaLisamine
 ON linnad
 FOR INSERT
@@ -55,7 +55,7 @@ FROM inserted;
 
 ### Kontrollimine
 
-```sql
+```
 INSERT INTO linnad (linnanimi, rahvaarv) VALUES ('Tallinn', 600000);
 SELECT * FROM linnad;
 SELECT * FROM logi;
@@ -67,7 +67,7 @@ SELECT * FROM logi;
 
 Jälgib kirjete kustutamist tabelist `linnad`.
 
-```sql
+```
 CREATE TRIGGER linnaKustutamine
 ON linnad
 FOR DELETE
@@ -85,7 +85,7 @@ FROM deleted;
 
 ### Kontrollimine
 
-```sql
+```
 DELETE FROM linnad WHERE linnID = 1;
 SELECT * FROM linnad;
 SELECT * FROM logi;
@@ -97,7 +97,7 @@ SELECT * FROM logi;
 
 Jälgib kirjete muutmist ja salvestab nii vanad kui uued andmed.
 
-```sql
+```
 CREATE TRIGGER linnaUuendamine
 ON linnad
 FOR UPDATE
@@ -121,7 +121,7 @@ INNER JOIN inserted ON deleted.linnID = inserted.linnID;
 
 ## 5. Triggeri muutmine (ALTER TRIGGER)
 
-```sql
+```
 ALTER TRIGGER [dbo].[linnaLisamine]
 ON [dbo].[linnad]
 FOR INSERT
@@ -141,7 +141,7 @@ FROM inserted;
 
 ## 6. Kombineeritud INSERT ja DELETE trigger
 
-```sql
+```
 CREATE TRIGGER linnaLisamineJaKustutamine
 ON linnad
 FOR INSERT, DELETE
