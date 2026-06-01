@@ -1,7 +1,6 @@
 ## ALTER TABLE
 
-[Select laused](select.md) | [ForeginKeys](foreignkey.sql) | [Alter_Table](alter_table.sql) | [Triggerid](trigerid.md) | [Kodutöö - Keys](keys.md)
-
+[Select laused](select.md) | [ForeginKeys](foreignkey.md) | [Alter_Table](alter_table.md) | [Triggerid](trigerid.md) | [Kodutöö - Keys](keys.md)
 
 --uue veeru lisamine
 alter table opilane2 add telefon varchar(1);
