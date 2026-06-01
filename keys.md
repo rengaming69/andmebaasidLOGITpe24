@@ -21,9 +21,8 @@ CREATE TABLE Kliendid (
 );
 ```
 
-kliendi_id (PK),isikukood (UQ),eesnimi,perenimi
-1,39501010011,Jaan,Tamm
-2,49602020022,Mari,Maasikas
+<img width="631" height="514" alt="{5BB005DB-FCAF-4EB6-834A-3BA489F66CBB}" src="https://github.com/user-attachments/assets/d773c050-dbf0-4220-ba2d-08215859e0ab" />
+
 
 Ekraanipildi selgitus: 
 Kombinatsioon kliendi_id (1) + eesnimi (Jaan) on unikaalne supervõti, kuigi "Jaan" üksi seda poleks.
@@ -46,11 +45,8 @@ CREATE TABLE Autod (
 );
 ```
 
-Table: Autod
-Indexes / Constraints:
-  - auto_id (Määratlemata loogiline kandidaat, hiljem PK)
-  - UQ_reg (UNIQUE Constraint veerul reg_number)
-  - UQ_vin (UNIQUE Constraint veerul vin_kood)
+<img width="610" height="474" alt="{9388C7FC-D06B-4161-89D8-543358BCE049}" src="https://github.com/user-attachments/assets/dd4188fc-111d-406d-a177-e6f064a77ee5" />
+
 
 
 Primary Key (Primaarvõti)
@@ -67,7 +63,8 @@ CREATE TABLE Tooted (
 );
 ```
 
-Query OK, 0 rows affected (0.04 sec)
+<img width="618" height="520" alt="{D083A85C-05B0-4D23-8A53-BB04298F5213}" src="https://github.com/user-attachments/assets/1a71edd8-29cd-4d2d-8d4a-8f2dcf5c1511" />
+
 
 
 4. Alternate Key (Alternatiivvõti)
@@ -83,9 +80,7 @@ CREATE TABLE Kasutajad (
 );
 ```
 
-kasutaja_id (PK),kasutajanimi (Alternate Key / UQ),parool_hash
-1,küber_karu,8f39b1...
-2,it_tigu,9a2c1b...
+<img width="781" height="499" alt="{78E3D57C-B8E8-4EDD-913B-7625D5939B4A}" src="https://github.com/user-attachments/assets/95d517f4-f1db-45ab-8c29-226b124942bc" />
 
 
 5. Unique Key (Unikaalne võti / piirang)
@@ -102,8 +97,8 @@ CREATE TABLE Töötajad (
 );
 ```
 
-INSERT INTO Töötajad VALUES (1, 'Mari', 'mari@firma.ee'); -> OK
-INSERT INTO Töötajad VALUES (2, 'Jüri', 'mari@firma.ee'); -> ERROR
+<img width="583" height="528" alt="{6D6A9C98-40E6-43AA-945D-CDF683084427}" src="https://github.com/user-attachments/assets/e1591c72-31c6-4ca4-b42d-0dd45f1136b9" />
+
 
 ERROR: duplicate key value violates unique constraint "UQ_Töötaja_Email"
 DETAIL: Key (email)=(mari@firma.ee) already exists.
@@ -121,6 +116,7 @@ CREATE TABLE Tellimused (
     CONSTRAINT FK_Tellimus_Toode FOREIGN KEY (toode_id) REFERENCES Tooted(toode_id)
 );
 ```
+<img width="720" height="529" alt="{0F431274-BBDC-4CCD-88BA-812B8D7AB30A}" src="https://github.com/user-attachments/assets/b19e2c03-7be1-4f49-8fe0-b53b33a4cd35" />
 
 
 7. Simple Key (Lihtvõti)
@@ -134,9 +130,8 @@ CREATE TABLE Riigid (
     riigi_nimi VARCHAR(100)
 );
 ```
-Columns:
-  * riigi_kood (CHAR(2), PK, Not Null)
-    riigi_nimi (VARCHAR(100), Nullable)
+<img width="1162" height="610" alt="{9702E1BD-E36E-43F4-B00C-B739B0A5543B}" src="https://github.com/user-attachments/assets/0e3d266c-3eb2-4faf-90aa-68896cc0c921" />
+
 
 
 8. Composite Key (Liitvõti)
@@ -153,10 +148,8 @@ CREATE TABLE Broneeringud (
 );
 ```
 
-rea_number (PK part 1),istekoha_number (PK part 2),kliendi_nimi
-5,10,Karl
-5,11,Liis
-6,10,Peeter
+<img width="1139" height="515" alt="{EF37451E-87F6-430E-8A27-1B7678B6A79A}" src="https://github.com/user-attachments/assets/4df8c0b4-d002-40e0-b291-6d754b2f1921" />
+
 
 9. Compound Key (Kombineeritud liitvõti)
 Lühike definitsioon: Liitvõtme eriliik, kus vähemalt üks (või kõik) võtme koostises olevatest veergudest on ühtlasi ka teise tabeli välisvõti (Foreign Key).
@@ -178,11 +171,7 @@ CREATE TABLE Õpib_Kursusel (
     CONSTRAINT PK_Õpib PRIMARY KEY (tudeng_id, kursuse_id) -- Compound Key
 );
 ```
-Table: Õpib_Kursusel
-Constraints:
-  - PRIMARY KEY (tudeng_id, kursuse_id) -> [Compound Key]
-  - FOREIGN KEY (tudeng_id) REFERENCES Tudengid(tudeng_id)
-  - FOREIGN KEY (kursuse_id) REFERENCES Kursused(kursuse_id)
+<img width="1058" height="501" alt="{FE1608B5-F4C0-425A-BFF8-E31AB6A4FE84}" src="https://github.com/user-attachments/assets/b9c88b68-cdc1-47cd-912b-434bb6cd043f" />
 
 Kasutatud allikate loetelu
 Date, C. J. (2004). An Introduction to Database Systems (8th Edition). Pearson Addison Wesley. (Teoreetiline ülevaade super- ja kandidaatvõtmete kohta).
