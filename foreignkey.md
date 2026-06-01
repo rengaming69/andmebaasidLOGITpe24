@@ -4,7 +4,8 @@
 
 SQL kood mis on tunnis tehtud
 
-```create database Reno;
+```
+create database Reno;
 use Reno
 --tableli loomine
 create table opilane(
