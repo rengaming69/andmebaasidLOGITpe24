@@ -2,7 +2,7 @@
 
 [Select laused](select.md) | [ForeginKeys](foreignkey.md) | [Alter_Table](alter_table.md) | [Triggerid](triggerkonspekt.md) | [Kodutöö - Keys](keys.md)
 
-SQL
+SQL kood mis on tunnis tehtud
 
 ```--uue veeru lisamine
 alter table opilane2 add telefon varchar(1);
