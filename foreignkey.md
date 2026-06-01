@@ -1,7 +1,6 @@
 ## FOREIGNKEY
 
-[Select laused](select.md) | [ForeginKeys](foreignkey.md) | [Alter_Table](alter_talbe.md) | [Triggerid](trigerid.md) | [Kodutöö - Keys](keys.md)
-
+[Select laused](select.md) | [ForeginKeys](foreignkey.md) | [Alter_Table](alter_table.md) | [Triggerid](trigerid.md) | [Kodutöö - Keys](keys.md)
 
 create database Reno;
 use Reno
