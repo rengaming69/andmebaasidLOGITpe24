@@ -168,7 +168,7 @@ CREATE TABLE Õpib_Kursusel (
     CONSTRAINT FK_Tudeng FOREIGN KEY (tudeng_id) REFERENCES Tudengid(tudeng_id),
     CONSTRAINT FK_Kursus FOREIGN KEY (kursuse_id) REFERENCES Kursused(kursuse_id),
     CONSTRAINT PK_Õpib PRIMARY KEY (tudeng_id, kursuse_id) -- Compound Key
-);```
+);
 
 Table: Õpib_Kursusel
 Constraints:
