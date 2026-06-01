@@ -85,4 +85,5 @@ ADD Units VARCHAR(20);
 -- Eemaldame nime unikaalsuse piirangu (eeldades, et nimi on teada)
 -- NB! Piirangu nimi sõltub süsteemist, kui seda pole loomisel ise määratud
 ALTER TABLE Category 
-DROP CONSTRAINT CategoryName;```
+DROP CONSTRAINT CategoryName;
+```
