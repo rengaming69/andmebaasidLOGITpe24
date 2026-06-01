@@ -1,5 +1,7 @@
 # SQL Triggerid – Konspekt
 
+[Select laused](select.md) | [ForeginKeys](foreignkey.md) | [Alter_Table](alter_table.md) | [Triggerid](triggerkonspekt.md) | [Kodutöö - Keys](keys.md)
+
 ## Mis on trigger?
 
 SQL trigger on andmebaasi objekt, mis **käivitub automaatselt** teatud sündmuse toimumisel (INSERT, UPDATE, DELETE). Triggeri abil saab näiteks logida muutusi, kontrollida andmeid või teha lisatoiminguid.
