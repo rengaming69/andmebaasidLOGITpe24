@@ -4,6 +4,12 @@
 
 SQL kood mis on tunnis tehtud
 
+<img width="567" height="607" alt="{8FE68076-E4CD-4229-B6EE-6CF34C4B2561}" src="https://github.com/user-attachments/assets/561a9cee-dd08-4429-82b1-024480374b9e" />
+
+<img width="566" height="539" alt="{6E8C0CB7-D815-4A97-BD0D-0C456D628B98}" src="https://github.com/user-attachments/assets/a85cfe9d-14a0-4f7c-8c25-772a79949485" />
+
+<img width="904" height="672" alt="{35B3C4BE-66E4-463D-9459-76768A4F82F4}" src="https://github.com/user-attachments/assets/610a9237-a072-43fb-a48b-df39d2bc927c" />
+
 ```
 create database Reno;
 use Reno
