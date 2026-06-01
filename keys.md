@@ -66,13 +66,6 @@ CREATE TABLE Tooted (
 
 Query OK, 0 rows affected (0.04 sec)
 
-Tabeli struktuuri pilt:
-Field       | Type         | Null | Key | Default
---------------------------------------------------
-toode_id    | int          | NO   | PRI | NULL
-toote_nimi  | varchar(100) | YES  |     | NULL
-hind        | decimal(10,2)| YES  |     | NULL
-
 
 4. Alternate Key (Alternatiivvõti)
 Lühike definitsioon: Kandidaatvõti, mida andmebaasi disainimisel ei valitud primaarvõtmeks.
@@ -124,11 +117,6 @@ CREATE TABLE Tellimused (
     CONSTRAINT FK_Tellimus_Toode FOREIGN KEY (toode_id) REFERENCES Tooted(toode_id)
 );
 
-[ Tooted ]                      [ Tellimused ]
------------                     --------------
-  toode_id (PK)  <----\           tellimus_id (PK)
-  toote_nimi           \-------   toode_id (FK)
-  hind                            kogus
 
 7. Simple Key (Lihtvõti)
 Lühike definitsioon: Võti, mis koosneb täpselt ühest veerust.
