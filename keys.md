@@ -18,7 +18,7 @@ CREATE TABLE Kliendid (
     isikukood CHAR(11) UNIQUE,
     eesnimi VARCHAR(50),
     perenimi VARCHAR(50)
-);```
+);
 
 kliendi_id (PK),isikukood (UQ),eesnimi,perenimi
 1,39501010011,Jaan,Tamm
