@@ -7,7 +7,7 @@ Andmebaasidega seotud sql kood ja konspektid
 
 ## SISUKORD
 
-[Select laused](select.md) | [ForeginKeys](foreignkey.md) | [Alter_Table](alter_table.md) | [Triggerid](trigger konspekt.md) | [Kodutöö - Keys](keys.md)
+[Select laused](select.md) | [ForeginKeys](foreignkey.md) | [Alter_Table](alter_table.md) | [Triggerid](triggerkonspekt.md) | [Kodutöö - Keys](keys.md)
 
 
 ## tunnis me kasutame andmebaasihaldussüsteemid:
