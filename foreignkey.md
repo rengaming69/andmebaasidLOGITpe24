@@ -58,3 +58,4 @@ drop database Lomonosov
 --tabelirida kustutamine
 select * from opilane
 delete from opilane where opilaneId=4;
+```
