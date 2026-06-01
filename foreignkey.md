@@ -2,7 +2,7 @@
 
 [Select laused](select.md) | [ForeginKeys](foreignkey.md) | [Alter_Table](alter_table.md) | [Triggerid](triggerkonspekt.md) | [Kodutöö - Keys](keys.md)
 
-create database Reno;
+```create database Reno;
 use Reno
 --tableli loomine
 create table opilane(
@@ -12,7 +12,7 @@ perekonnanimi varchar(30) not null,
 synniaeg date, 
 pohitoetus bit,
 aadress text,
-keskminehinne decimal(2,1))
+keskminehinne decimal(2,1))```
 
 select * from opilane;
 
