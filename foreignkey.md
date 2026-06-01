@@ -2,6 +2,8 @@
 
 [Select laused](select.md) | [ForeginKeys](foreignkey.md) | [Alter_Table](alter_table.md) | [Triggerid](triggerkonspekt.md) | [Kodutöö - Keys](keys.md)
 
+SQL kood mis on tunnis tehtud
+
 ```create database Reno;
 use Reno
 --tableli loomine
