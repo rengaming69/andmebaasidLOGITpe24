@@ -7,7 +7,7 @@ Andmebaasidega seotud sql kood ja konspektid
 
 ## SISUKORD
 
-[Select laused](select.md) | [ForeginKeys](foreignkey.md) | [Alter_Table](alter_table.md) | [Triggerid](triggerkonspekt.md) | [Kodutöö - Keys](keys.md) | [Kasutaja loomine SQL Server](Kasutaja.md)
+[Select laused](select.md) | [ForeginKeys](foreignkey.md) | [Alter_Table](alter_table.md) | [Triggerid](triggerkonspekt.md) | [Kodutöö - Keys](keys.md) | [Kasutaja loomine SQL Server](Kasutajad.md)
 
 ## tunnis me kasutame andmebaasihaldussüsteemid:
 1. SQL Server Managment Stuudio (SQL Serveri haldamiseks)
