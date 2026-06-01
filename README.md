@@ -7,7 +7,7 @@ Andmebaasidega seotud sql kood ja konspektid
 
 ## SISUKORD
 
-[Select laused](select.md) | [Kasutaja loomine XAMPP-is](kasutajaXampp.md) | [Kasutaja loomine SQL Server](kasutaja.md) | [Triggerid](trigerid.md) | [Kodutöö - Keys](keys.md)
+[Select laused](select.md) | [ForeginKeys](foreignkey.sql) | [Alter_Table](alter_talbe.sql) | [Triggerid](trigerid.md) | [Kodutöö - Keys](keys.md)
 
 
 ## tunnis me kasutame andmebaasihaldussüsteemid:
