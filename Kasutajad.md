@@ -30,3 +30,7 @@ Näide: Kasutajanimi: DirectorRokk, Parool: director
 
 <img width="528" height="651" alt="{8616F3AE-0779-4D46-A9AF-CD08AAB8DD0F}" src="https://github.com/user-attachments/assets/1c1e664d-1a99-429d-bd92-06484993efed" />
 
+<img width="1412" height="1114" alt="image" src="https://github.com/user-attachments/assets/fc52d292-9403-4716-b3a5-ba394e63d6db" />
+
+<img width="1721" height="914" alt="image" src="https://github.com/user-attachments/assets/b921fdac-2a57-43fc-9d6e-380d0f9074bf" />
+
