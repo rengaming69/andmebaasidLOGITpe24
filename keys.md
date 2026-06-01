@@ -1,3 +1,7 @@
+## KEYS 
+
+[Select laused](select.md) | [ForeginKeys](foreignkey.md) | [Alter_Table](alter_table.md) | [Triggerid](trigerid.md) | [Kodutöö - Keys](keys.md)
+
 1. Superkey (Supervõti):
 
 Lühike definitsioon: Veerg või veergude kombinatsioon, mis võimaldab tabelis iga rida (kirjet) unikaalselt tuvastada.
