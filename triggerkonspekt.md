@@ -30,6 +30,7 @@ CREATE TABLE logi (
     andmed   TEXT
 );
 ```
+<img width="730" height="596" alt="image" src="https://github.com/user-attachments/assets/fd0a9b76-ca24-48d6-9ef1-29770031cd1a" />
 
 ---
 
@@ -50,6 +51,7 @@ SELECT
     CONCAT('linn: ', inserted.linnanimi, ', elanike arv: ', inserted.rahvaarv)
 FROM inserted;
 ```
+<img width="829" height="511" alt="{595DA609-4183-4D0A-9B89-91F8AB21F210}" src="https://github.com/user-attachments/assets/4bb8f390-df37-4cd7-ae10-a17079370f35" />
 
 > **`inserted`** – SQL Serveri virtuaaltabel, mis sisaldab äsja lisatud ridu.  
 > **`SUSER_NAME()`** – tagastab sisselogitud kasutaja nime.  
@@ -62,6 +64,7 @@ INSERT INTO linnad (linnanimi, rahvaarv) VALUES ('Tallinn', 600000);
 SELECT * FROM linnad;
 SELECT * FROM logi;
 ```
+<img width="667" height="412" alt="{F1FC7CEC-80DE-4030-8604-6AAFBF239C6F}" src="https://github.com/user-attachments/assets/cf0b879d-d2a3-4366-8825-27380781593f" />
 
 ---
 
@@ -82,6 +85,7 @@ SELECT
     CONCAT('linn: ', deleted.linnanimi, ', elanike arv: ', deleted.rahvaarv)
 FROM deleted;
 ```
+<img width="813" height="377" alt="{83194206-EED7-4057-9B02-53E467125B13}" src="https://github.com/user-attachments/assets/ba9b3488-b5b2-4ffd-9dcb-f6771b020087" />
 
 > **`deleted`** – virtuaaltabel, mis sisaldab kustutatud ridu.
 
@@ -92,6 +96,7 @@ DELETE FROM linnad WHERE linnID = 1;
 SELECT * FROM linnad;
 SELECT * FROM logi;
 ```
+<img width="734" height="402" alt="{BFB0759C-9F60-433B-B4CB-C426705D3A84}" src="https://github.com/user-attachments/assets/eef5bebe-a3b5-4c02-bc04-eb4426bbb6db" />
 
 ---
 
@@ -116,6 +121,7 @@ SELECT
 FROM deleted
 INNER JOIN inserted ON deleted.linnID = inserted.linnID;
 ```
+<img width="890" height="616" alt="{DBF22B3F-C0E4-4A37-A6FF-E76A1BD85918}" src="https://github.com/user-attachments/assets/2426db9f-a5ab-4cb2-bdcd-068d792f5fd3" />
 
 > UPDATE-triggers on saadaval **mõlemad** virtuaaltabelid: `deleted` (vanad väärtused) ja `inserted` (uued väärtused).
 
@@ -136,6 +142,7 @@ SELECT
     CONCAT('linn: ', inserted.linnanimi, ', elanike arv: ', inserted.rahvaarv)
 FROM inserted;
 ```
+<img width="964" height="638" alt="{0FCA5BC0-78E6-4C76-BE1E-F1E2C804BF0F}" src="https://github.com/user-attachments/assets/e377ea27-12b5-48fe-8a98-7dd0e82987e2" />
 
 > Triggeri muutmiseks SSMS-is: **Leia trigger → Paremklõps → Modify → Muuda → Execute**
 
@@ -167,6 +174,7 @@ SELECT
 FROM deleted
 WHERE EXISTS (SELECT 1 FROM deleted);
 ```
+<img width="745" height="565" alt="{1E92605B-B9DC-4B65-8271-667EFB756BAD}" src="https://github.com/user-attachments/assets/9b6b333c-3433-436c-ae38-0fffbfbcdc3e" />
 
 ---
 
@@ -188,4 +196,4 @@ WHERE EXISTS (SELECT 1 FROM deleted);
 
 ---
 
-*Konspekt põhineb tunnis tehtud harjutustel – TARgv24*
+*Konspekt põhineb tunnis tehtud harjutustel – LOGITpe24*
