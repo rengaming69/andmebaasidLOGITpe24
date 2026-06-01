@@ -1,6 +1,6 @@
 ## KEYS 
 
-[Select laused](select.md) | [ForeginKeys](foreignkey.md) | [Alter_Table](alter_table.md) | [Triggerid](triggerkonspekt.md) | [Kodutöö - Keys](keys.md)
+[Select laused](select.md) | [ForeginKeys](foreignkey.md) | [Alter_Table](alter_table.md) | [Triggerid](triggerkonspekt.md) | [Kodutöö - Keys](keys.md) | [Kasutaja loomine SQL Server](Kasutajad.md)
 
 1. Superkey (Supervõti):
 
