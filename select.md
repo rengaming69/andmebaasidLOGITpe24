@@ -1,3 +1,7 @@
+## SELECT LAUSED
+
+[Select laused](select.md) | [Kasutaja loomine XAMPP-is](kasutajaXampp.md) | [Kasutaja loomine SQL Server](kasutaja.md) | [Triggerid](trigerid.md) | [Kodutöö - Keys](keys.md)
+
 <img width="1392" height="491" alt="{95842C6A-B919-4452-BD62-388F73B7DF45}" src="https://github.com/user-attachments/assets/655af006-92ce-493a-8774-bdab78cd3dda" />
 
 <img width="539" height="264" alt="{6D0FBB7F-12F5-43F5-B19B-54A783953752}" src="https://github.com/user-attachments/assets/56941fca-720a-462a-8e79-eb4c28512bda" />
