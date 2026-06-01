@@ -9,7 +9,6 @@ Andmebaasidega seotud sql kood ja konspektid
 
 [Select laused](select.md) | [ForeginKeys](foreignkey.md) | [Alter_Table](alter_table.md) | [Triggerid](triggerkonspekt.md) | [Kodutöö - Keys](keys.md)
 
-
 ## tunnis me kasutame andmebaasihaldussüsteemid:
 1. SQL Server Managment Stuudio (SQL Serveri haldamiseks)
  <img width="471" height="508" alt="{242019DC-0ECC-4CFD-B9FC-9F44665B022E}" src="https://github.com/user-attachments/assets/205152dc-dd05-49be-87ee-973edfe79093" />
