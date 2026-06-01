@@ -1,4 +1,4 @@
-# andmebaasidLOGITpe24
+# andmebaasid RENO Konspektid
 Andmebaasidega seotud sql kood ja konspektid
 
 - SQL - structured query langauge
@@ -6,9 +6,8 @@ Andmebaasidega seotud sql kood ja konspektid
 - DML - Data manipulation langauge - insert, update, delete
 
 ## SISUKORD
-[Select laused](select.md)
-[Triggerid](Trigger)
-[Kodutöö - Keys](keys.md)
+
+[Select laused](select.md) | [Triggerid](Trigger) | [Kodutöö - Keys](keys.md)
 
 
 ## tunnis me kasutame andmebaasihaldussüsteemid:
