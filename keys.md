@@ -19,6 +19,7 @@ CREATE TABLE Kliendid (
     eesnimi VARCHAR(50),
     perenimi VARCHAR(50)
 );
+```
 
 kliendi_id (PK),isikukood (UQ),eesnimi,perenimi
 1,39501010011,Jaan,Tamm
@@ -42,7 +43,8 @@ CREATE TABLE Autod (
     mudel VARCHAR(50),
     CONSTRAINT UQ_reg UNIQUE (reg_number),
     CONSTRAINT UQ_vin UNIQUE (vin_kood)
-);```
+);
+```
 
 Table: Autod
 Indexes / Constraints:
@@ -62,7 +64,8 @@ CREATE TABLE Tooted (
     toote_nimi VARCHAR(100),
     hind DECIMAL(10,2),
     CONSTRAINT PK_Tooted PRIMARY KEY (toode_id)
-);```
+);
+```
 
 Query OK, 0 rows affected (0.04 sec)
 
@@ -77,7 +80,8 @@ CREATE TABLE Kasutajad (
     kasutaja_id INT PRIMARY KEY,       -- Valitud Primaarvõtmeks
     kasutajanimi VARCHAR(50) UNIQUE,   -- Alternatiivvõti (Alternating Key)
     parool_hash VARCHAR(255)
-);```
+);
+```
 
 kasutaja_id (PK),kasutajanimi (Alternate Key / UQ),parool_hash
 1,küber_karu,8f39b1...
@@ -95,7 +99,8 @@ CREATE TABLE Töötajad (
     eesnimi VARCHAR(50),
     email VARCHAR(100),
     CONSTRAINT UQ_Töötaja_Email UNIQUE (email)
-);```
+);
+```
 
 INSERT INTO Töötajad VALUES (1, 'Mari', 'mari@firma.ee'); -> OK
 INSERT INTO Töötajad VALUES (2, 'Jüri', 'mari@firma.ee'); -> ERROR
@@ -114,7 +119,8 @@ CREATE TABLE Tellimused (
     toode_id INT,                     -- Välisvõti
     kogus INT,
     CONSTRAINT FK_Tellimus_Toode FOREIGN KEY (toode_id) REFERENCES Tooted(toode_id)
-);```
+);
+```
 
 
 7. Simple Key (Lihtvõti)
@@ -126,7 +132,8 @@ Mille poolest erineb teistest võtmetest: Erineb struktuurselt liitvõtmetest (C
 CREATE TABLE Riigid (
     riigi_kood CHAR(2) PRIMARY KEY, -- Simple Key (ainult üks veerg)
     riigi_nimi VARCHAR(100)
-);```
+);
+```
 Columns:
   * riigi_kood (CHAR(2), PK, Not Null)
     riigi_nimi (VARCHAR(100), Nullable)
@@ -143,7 +150,8 @@ CREATE TABLE Broneeringud (
     istekoha_number INT NOT NULL,
     kliendi_nimi VARCHAR(100),
     CONSTRAINT PK_Broneering PRIMARY KEY (rea_number, istekoha_number) -- Composite Key
-);```
+);
+```
 
 rea_number (PK part 1),istekoha_number (PK part 2),kliendi_nimi
 5,10,Karl
@@ -169,7 +177,7 @@ CREATE TABLE Õpib_Kursusel (
     CONSTRAINT FK_Kursus FOREIGN KEY (kursuse_id) REFERENCES Kursused(kursuse_id),
     CONSTRAINT PK_Õpib PRIMARY KEY (tudeng_id, kursuse_id) -- Compound Key
 );
-
+```
 Table: Õpib_Kursusel
 Constraints:
   - PRIMARY KEY (tudeng_id, kursuse_id) -> [Compound Key]
