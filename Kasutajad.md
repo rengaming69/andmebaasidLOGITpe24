@@ -26,4 +26,7 @@ Näide: Kasutajanimi: DirectorRokk, Parool: director
 
 <img width="345" height="326" alt="{BF63C107-3742-4F5B-A9F8-54E2B5175D63}" src="https://github.com/user-attachments/assets/f43fef7b-02b1-4736-92e0-59fa612fba83" />
 
+<img width="679" height="645" alt="{6D6A179E-6B85-4CAC-B1CE-A8D256ED0B66}" src="https://github.com/user-attachments/assets/66701e73-de09-486e-a5f8-3a9aea1f8ccb" />
+
+<img width="528" height="651" alt="{8616F3AE-0779-4D46-A9AF-CD08AAB8DD0F}" src="https://github.com/user-attachments/assets/1c1e664d-1a99-429d-bd92-06484993efed" />
 
