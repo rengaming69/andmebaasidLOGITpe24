@@ -4,7 +4,8 @@
 
 SQL kood mis on tunnis tehtud
 
-```--uue veeru lisamine
+```
+--uue veeru lisamine
 alter table opilane2 add telefon varchar(1);
 
 --tabli struktuuri muutmine -veeru kustutamine
