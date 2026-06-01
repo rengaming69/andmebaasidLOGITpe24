@@ -2,7 +2,9 @@
 
 [Select laused](select.md) | [ForeginKeys](foreignkey.md) | [Alter_Table](alter_table.md) | [Triggerid](triggerkonspekt.md) | [Kodutöö - Keys](keys.md)
 
---uue veeru lisamine
+SQL
+
+```--uue veeru lisamine
 alter table opilane2 add telefon varchar(1);
 
 --tabli struktuuri muutmine -veeru kustutamine
@@ -83,4 +85,4 @@ ADD Units VARCHAR(20);
 -- Eemaldame nime unikaalsuse piirangu (eeldades, et nimi on teada)
 -- NB! Piirangu nimi sõltub süsteemist, kui seda pole loomisel ise määratud
 ALTER TABLE Category 
-DROP CONSTRAINT CategoryName;
+DROP CONSTRAINT CategoryName;```
